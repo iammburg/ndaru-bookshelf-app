@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NdaruBookshelf &mdash; I Want to Read</title>
+
+    <link rel="icon" type="image/x-icon" href="/assets/images/icon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Google Icon -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+</head>
+
+<body>
+    <!-- NavBar -->
+    <header>
+        <div class="logo">
+            <h1>NdaruBookshelf</h1>
+        </div>
+        <nav class="nav-list">
+            <form id="searchBook">
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <input type="text" placeholder="Search your book here..." class="search-input"
+                            id="searchBookTitle">
+                        <button id="searchSubmit" type='submit' class='search-button'>
+                            <i class="material-icons search-icon">search</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <div class="profile-icon">
+                <i class="material-icons">account_circle</i>
+            </div>
+        </nav>
+    </header>
+    <!-- End of NavBar -->
+
+
+    <main>
+        <div class="main-container">
+            <!-- Add Book Form -->
+            <section class="input_section" id="formBook">
+                <div class="title-container">
+                    <h3>Add Book to Bookshelf</h3>
+                </div>
+                <form id="inputBook">
+                    <div class="input">
+                        <label for="inputBookTitle">Title</label>
+                        <input id="inputBookTitle" class="required" type="text" placeholder="Title" required />
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Author</label>
+                        <input id="inputBookAuthor" class="required" type="text" placeholder="Author" required />
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Year Published</label>
+                        <input id="inputBookYear" class="required" type="number" placeholder="Year" required />
+                    </div>
+                    <div class="input">
+                        <label for="inputBookCategory">Genre</label>
+                        <input id="inputBookCategory" class="required" type="text" placeholder="Category" required />
+                    </div>
+                    <div class="input_inline">
+                        <label for="inputBookIsComplete">Finished Reading</label>
+                        <input id="inputBookIsComplete" type="checkbox" />
+                    </div>
+                    <button id="bookSubmit" type="submit">Add Book to Unfinished</button>
+                </form>
+            </section>
+            <!-- End of Add Book Form -->
+
+            <!-- Unfinished Section -->
+            <section class="unfinished">
+                <div class="title-container">
+                    <h2>Unfinished</h2>
+                </div>
+                <div class="unfinished-container" id="incompleteBookshelfList">
+                    <!-- <div class="unfinished-item">
+                        <img src="./assets/images/cover.jpg" alt="Book Cover">
+                        <article class="book-content">
+                            <h2>Book Title</h2>
+                            <h3>By: Author</h3>
+                            <h4>Year Published: 2005</h4>
+                            <h5>Genre: Genre</h5>
+                            <div class="button-action">
+                                <button class="button-check">
+                                    <i class="material-symbols-outlined">check_circle</i>
+                                </button>
+                                <button class="button-edit">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </button>
+                                <button class="button-delete">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </article>
+                    </div> -->
+                    <!-- <div class="unfinished-item">
+                        <img src="./assets/images/cover.jpg" alt="Book Cover">
+                        <article>
+                            <h2>Book Title</h2>
+                            <h3>By: Author</h3>
+                            <h4>Year Published: 2005</h4>
+                            <h5>Genre: Genre</h5>
+                            <div class="button-action">
+                                <button class="button-check">
+                                    <i class="material-symbols-outlined">check_circle</i>
+                                </button>
+                                <button class="button-edit">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </button>
+                                <button class="button-delete">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="unfinished-item">
+                        <img src="./assets/images/cover.jpg" alt="Book Cover">
+                        <article>
+                            <h2>Book Title</h2>
+                            <h3>By: Author</h3>
+                            <h4>Year Published: 2005</h4>
+                            <h5>Genre: Genre</h5>
+                            <div class="button-action">
+                                <button class="button-check">
+                                    <i class="material-symbols-outlined">check_circle</i>
+                                </button>
+                                <button class="button-edit">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </button>
+                                <button class="button-delete">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </article>
+                    </div> -->
+                </div>
+            </section>
+            <!-- End of Unfinished Section -->
+
+            <!-- Finished Section -->
+            <section class="finished">
+                <div class="title-container">
+                    <h2>Finished Reading</h2>
+                </div>
+                <div class="finished-container" id="completeBookshelfList">
+                    <!-- <div class="finished-item">
+                        <img src="./assets/images/cover.jpg" alt="Book Cover">
+                        <article>
+                            <h2>Book Title</h2>
+                            <h3>By: Author</h3>
+                            <h4>Year Published: 2005</h4>
+                            <h5>Genre: Genre</h5>
+                            <div class="button-action">
+                                <button class="button-check">
+                                    <i class="material-symbols-outlined">check_circle</i>
+                                </button>
+                                <button class="button-edit">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </button>
+                                <button class="button-delete">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="finished-item">
+                        <img src="./assets/images/cover.jpg" alt="Book Cover">
+                        <article>
+                            <h2>Book Title</h2>
+                            <h3>By: Author</h3>
+                            <h4>Year Published: 2005</h4>
+                            <h5>Genre: Genre</h5>
+                            <div class="button-action">
+                                <button class="button-check">
+                                    <i class="material-symbols-outlined">check_circle</i>
+                                </button>
+                                <button class="button-edit">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </button>
+                                <button class="button-delete">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="finished-item">
+                        <img src="./assets/images/cover.jpg" alt="Book Cover">
+                        <article>
+                            <h2>Book Title</h2>
+                            <h3>By: Author</h3>
+                            <h4>Year Published: 2005</h4>
+                            <h5>Genre: Genre</h5>
+                            <div class="button-action">
+                                <button class="button-check">
+                                    <i class="material-symbols-outlined">check_circle</i>
+                                </button>
+                                <button class="button-edit">
+                                    <i class="material-symbols-outlined">edit</i>
+                                </button>
+                                <button class="button-delete">
+                                    <i class="material-symbols-outlined">delete</i>
+                                </button>
+                            </div>
+                        </article>
+                    </div> -->
+                </div>
+            </section>
+            <!-- End of Finished Section -->
+        </div>
+    </main>
+    <script src="assets/js/scripts.js"></script>
+</body>
+
+</html>

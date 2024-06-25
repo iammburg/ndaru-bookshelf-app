@@ -1,0 +1,577 @@
+:root {
+    --background-color: #806dd6;
+    /* --text-color: #ecf0f1; */
+    --accent-color: #dffa71;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 128px 32px 128px;
+}
+
+/* NavBar Start */
+header {
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 48px 4px 48px;
+    border-bottom: var(--accent-color) 2px solid;
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    font-family: "Outfit", sans-serif;
+    color: var(--accent-color);
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    color: var(--background-color);
+    background-color: var(--accent-color);
+    font-size: 16px;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    color: var(--background-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-icon {
+    vertical-align: middle;
+}
+
+.search-wrapper > input {
+    font-family: "Outfit", sans-serif;
+}
+
+.profile-icon {
+    color: var(--accent-color);
+}
+
+.profile-icon i {
+    vertical-align: middle;
+    font-size: 40px;
+}
+
+/* NavBar End */
+
+/* Form Add Book Start */
+.input_section {
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 32px;
+    padding: 16px;
+    gap: 4px;
+    border-radius: 30px;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.input_section > form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 16px;
+}
+
+.input_section > form > .input {
+    display: flex;
+    flex-direction: column;
+    margin: 4px;
+    font-family: "Outfit", sans-serif;
+}
+
+.input_section > form > .input > input {
+    border-radius: 8px;
+    /* padding: 8px 320px 8px 8px; */
+    padding: 10px;
+}
+
+.input_section > form > button {
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    border: 2px solid var(--background-color);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.input_section > form > button:hover {
+    background-color: var(--accent-color);
+    color: var(--background-color);
+}
+
+.input_section > form > .input > label {
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+.input_section > form > .input_inline {
+    margin: 12px 0;
+    display: flex;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    gap: 4px;
+}
+
+.input_section > form > .input_inline > label {
+    color: var(--background-color);
+    font-weight: bold;
+}
+
+/* Form Add Book End */
+
+/* Unfinished Start */
+.unfinished {
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    margin: 32px;
+    padding: 4px;
+    gap: 4px;
+    border-radius: 30px;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    color: var(--background-color);
+    font-size: 20px;
+}
+
+.unfinished-container {
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 32px;
+    padding: 4px;
+    gap: 40px;
+    border-radius: 30px;
+    font-family: "Outfit", sans-serif;
+}
+
+.unfinished-container > .unfinished-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.unfinished-container > .unfinished-item > img {
+    max-width: 100%;
+}
+
+.unfinished-container > .unfinished-item > article {
+    font-family: "Outfit", sans-serif;
+    padding: 16px;
+}
+
+.unfinished-container > .unfinished-item > article h2,
+.unfinished-container > .unfinished-item > article h3,
+.unfinished-container > .unfinished-item > article h4,
+.unfinished-container > .unfinished-item > article h5 {
+    margin: 8px;
+}
+
+/* Button Action Start */
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+    width: 100%;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    button {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 24px 8px 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animasi Button */
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-check {
+    transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-check:hover {
+    background-color: #42f542;
+    color: #ffffff;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-edit {
+    transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-edit:hover {
+    background-color: #ffff41;
+    color: #ffffff;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-delete {
+    transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-delete:hover {
+    background-color: #ff4e4e;
+    color: #ffffff;
+}
+
+/* Akhir Animasi Button */
+
+/* Mengatur ukuran icon */
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    button
+    .material-symbols-outlined {
+    font-size: 24px;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-check {
+    border: #42f542 2px solid;
+    color: #42f542;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-edit {
+    border: #ffff41 2px solid;
+    color: #ffff41;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action
+    .button-delete {
+    border: #ff4e4e 2px solid;
+    color: #ff4e4e;
+}
+
+.unfinished-container
+    > .unfinished-item
+    > article
+    > .button-action:hover {
+    background-color: transparent;
+}
+
+/* Button Action End */
+
+/* Unfinished End */
+
+/* Finished Start */
+
+.finished {
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: column;
+    margin: 32px;
+    padding: 4px;
+    gap: 4px;
+    border-radius: 30px;
+    max-width: 1440px;
+    width: 100%;
+}
+
+.title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Outfit", sans-serif;
+    color: var(--background-color);
+    font-size: 20px;
+}
+
+.finished-container {
+    background-color: var(--accent-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    margin: 32px;
+    padding: 4px;
+    gap: 40px;
+    border-radius: 30px;
+}
+
+.finished-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.finished-item > img {
+    max-width: 100%;
+}
+
+.finished-item > article {
+    font-family: "Outfit", sans-serif;
+    padding: 16px;
+}
+
+.finished-item > article h2,
+.finished-item > article h3,
+.finished-item > article h4,
+.finished-item > article h5 {
+    margin: 8px;
+}
+
+/* Button Action Start */
+.button-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding-top: 8px;
+    flex-wrap: wrap;
+}
+
+.button-action button {
+    border: none;
+    border-radius: 10px;
+    padding: 8px 24px 8px 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Animasi Button */
+.button-action .button-check {
+    transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.button-action .button-check:hover {
+    background-color: #42f542;
+    color: #ffffff;
+}
+
+.button-action .button-edit {
+    transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.button-action .button-edit:hover {
+    background-color: #ffff41;
+    color: #ffffff;
+}
+
+.button-action .button-delete {
+    transition: background-color 0.3s ease-in-out,
+        color 0.3s ease-in-out;
+}
+
+.button-action .button-delete:hover {
+    background-color: #ff4e4e;
+    color: #ffffff;
+}
+
+/* Akhir Animasi Button */
+
+/* Mengatur ukuran icon */
+.button-action button .material-symbols-outlined {
+    font-size: 24px;
+}
+
+.button-action .button-check {
+    border: #42f542 2px solid;
+    color: #42f542;
+}
+
+.button-action .button-edit {
+    border: #ffff41 2px solid;
+    color: #ffff41;
+}
+
+.button-action .button-delete {
+    border: #ff4e4e 2px solid;
+    color: #ff4e4e;
+}
+
+.button-action:hover {
+    background-color: transparent;
+}
+
+/* Button Action End */
+
+/* Finished End */
+
+/* Responsive */
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 48px 12px 48px;
+        gap: 0px;
+    }
+
+    .logo h1 {
+        font-size: 23px;
+        margin: 10px;
+    }
+
+    .search-input {
+        padding: 5px 5px 5px 38px;
+    }
+
+    .profile-icon i {
+        font-size: 33px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main-container {
+        padding: 32px 64px 32px 64px;
+    }
+
+    .unfinished-container,
+    .finished-container {
+        background-color: var(--accent-color);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 8px;
+        padding: 16px;
+        gap: 20px;
+        border-radius: 30px;
+    }
+
+    .unfinished-item,
+    .finished-item {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .unfinished-container,
+    .finished-container {
+        background-color: var(--accent-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 4px;
+        padding: 4px;
+        gap: 20px;
+        border-radius: 30px;
+    }
+
+    .unfinished-item,
+    .finished-item {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .main-container {
+        padding: 8px 16px 8px 16px;
+    }
+}
