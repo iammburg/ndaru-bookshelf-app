@@ -43,8 +43,18 @@
                 </div>
             </form>
             <div class="profile-icon">
-                <i class="material-icons">account_circle</i>
+                <button type="submit" class='btn' onclick="openPopup()">
+                    <i class="material-icons">account_circle</i>
+                </button>
+                <div class="popup" id="popup">
+                    <h2>My Profiles:</h2>
+                    <p>
+                        Github: <a href="https://github.com/iammburg" target='_blank'>iammburg</a><br>
+                    </p>
+                    <button type="button" onclick="closePopup()">Close</button>
+                </div>
             </div>
+
         </nav>
     </header>
     <!-- End of NavBar -->
@@ -71,7 +81,7 @@
                         <input id="inputBookYear" class="required" type="number" placeholder="Year" required />
                     </div>
                     <div class="input">
-                        <label for="inputBookCategory">Genre</label>
+                        <label for="inputBookCategory">Category/Genre</label>
                         <input id="inputBookCategory" class="required" type="text" placeholder="Category" required />
                     </div>
                     <div class="input_inline">

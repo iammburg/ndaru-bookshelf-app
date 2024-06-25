@@ -175,7 +175,7 @@ function newBook(bookObject) {
     bookYear.innerText = `Year Published: ${bookObject.year}`;
 
     const bookCategory = document.createElement("h5");
-    bookCategory.innerText = `Genre: ${bookObject.category}`;
+    bookCategory.innerText = `Genre/Category: ${bookObject.category}`;
 
     const content = document.createElement("article");
     content.classList.add("book-content");
@@ -392,16 +392,32 @@ const search = document.getElementById("searchBookTitle");
 
 search.addEventListener("keyup", function (event) {
     const searchBook = event.target.value.toLowerCase();
-    const listBooks = document.querySelectorAll(
-        ".book_list article"
+    const unfinishedBooks = document.querySelectorAll(
+        "#incompleteBookshelfList .unfinished-item"
+    );
+    const finishedBooks = document.querySelectorAll(
+        "#completeBookshelfList .finished-item"
     );
 
-    listBooks.forEach((book) => {
+    unfinishedBooks.forEach((book) => {
         const bookTitle = book
-            .querySelector(".content h3")
+            .querySelector("h2")
             .innerText.toLowerCase();
         if (bookTitle.includes(searchBook)) {
-            book.style.display = "flex";
+            book.style.display = "";
+        } else {
+            book.style.display = "none";
+        }
+    });
+
+    finishedBooks.forEach((book) => {
+        const bookTitle = book
+            .querySelector("h2")
+            .innerText.toLowerCase();
+        if (bookTitle.includes(searchBook)) {
+            book.style.display = "";
+        } else {
+            book.style.display = "none";
         }
     });
 });
@@ -411,3 +427,14 @@ const searchSubmit = document.getElementById("searchSubmit");
 searchSubmit.addEventListener("click", function (event) {
     event.preventDefault();
 });
+
+// Profile
+let popup = document.getElementById("popup");
+
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+
+function closePopup() {
+    popup.classList.remove("open-popup");
+}

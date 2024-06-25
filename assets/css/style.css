@@ -6,6 +6,7 @@
 
 body {
     background-color: var(--background-color);
+    font-family: "Outfit", sans-serif;
 }
 
 .main-container {
@@ -82,13 +83,73 @@ header {
     font-family: "Outfit", sans-serif;
 }
 
-.profile-icon {
+.profile-icon > button {
     color: var(--accent-color);
+    background: none;
+    border: none;
 }
 
 .profile-icon i {
     vertical-align: middle;
     font-size: 40px;
+}
+
+.btn {
+    padding: 1rem 1rem;
+    background: #fff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 10px;
+    transition: transform 0.2s;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.popup {
+    width: 400px;
+    background: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    text-align: center;
+    padding: 0 30px 60px;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    font-family: "Outfit", sans-serif;
+}
+
+.open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup h2 {
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+
+.popup button {
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background-color: #806dd6;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* NavBar End */
@@ -197,13 +258,14 @@ header {
     background-color: var(--accent-color);
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: start;
     margin: 32px;
     padding: 4px;
     gap: 40px;
     border-radius: 30px;
     font-family: "Outfit", sans-serif;
+    flex-wrap: wrap;
 }
 
 .unfinished-container > .unfinished-item {
@@ -389,12 +451,13 @@ header {
     background-color: var(--accent-color);
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: start;
     margin: 32px;
     padding: 4px;
     gap: 40px;
     border-radius: 30px;
+    flex-wrap: wrap;
 }
 
 .finished-item {
