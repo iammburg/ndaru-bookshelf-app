@@ -95,7 +95,7 @@ header {
 }
 
 .btn {
-    padding: 1rem 1rem;
+    padding: 8px 8px;
     background: #fff;
     border: 0;
     outline: none;
@@ -162,7 +162,7 @@ header {
     justify-content: center;
     align-content: center;
     margin: 32px;
-    padding: 16px;
+    padding: 4px;
     gap: 4px;
     border-radius: 30px;
     max-width: 1440px;
@@ -636,5 +636,13 @@ header {
 @media screen and (max-width: 425px) {
     .main-container {
         padding: 8px 16px 8px 16px;
+    }
+
+    .search-input {
+        width: 214px;
+    }
+
+    .search-input {
+        padding: 5px 5px 5px 16px;
     }
 }
